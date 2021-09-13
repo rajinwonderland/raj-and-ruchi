@@ -7,12 +7,17 @@ import {
   useColorModeValue as mode,
 } from "@chakra-ui/react";
 import * as React from "react";
-import { Countdown } from "./countdown";
 
 export const Hero = ({ title, tagline, subtitle, image }) => {
   return (
-    <Box as="section" pb="24" pos="relative" px={{ base: "6", lg: "12" }}>
-      <Box maxW="7xl" mx="auto">
+    <Box
+      as="section"
+      pb="24"
+      pos="relative"
+      px={{ base: "6", lg: "12" }}
+      h="100vh"
+    >
+      <Box maxW="7xl" mx="auto" pos="relative">
         <Box
           maxW={{ lg: "md", xl: "xl" }}
           pt={{ base: "20", lg: "40" }}
@@ -32,10 +37,11 @@ export const Hero = ({ title, tagline, subtitle, image }) => {
           </HStack>
           <Heading
             as="h1"
-            size="3xl"
+            size="4xl"
             lineHeight="1"
-            fontWeight="extrabold"
-            letterSpacing="tight"
+            fontWeight="normal"
+            letterSpacing="normal"
+            fontFamily="display"
           >
             {title}
           </Heading>
@@ -47,8 +53,7 @@ export const Hero = ({ title, tagline, subtitle, image }) => {
           >
             {subtitle}
           </Text>
-          <Box mt="8">
-          </Box>
+          <Box mt="8"></Box>
         </Box>
       </Box>
       <Box
