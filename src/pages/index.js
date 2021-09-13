@@ -1,26 +1,11 @@
-import { SimpleGrid } from "@chakra-ui/layout";
 import * as React from "react";
+import { Countdown } from "../components/countdown";
 import { Hero } from "../components/hero";
-import { Stat } from "../components/stat";
-import useCountdownTimer from "../hooks/useCountdownTimer";
+import useCountdownStats from "../hooks/useCountdownStats";
 import dunes from "../images/dunes-rnr.jpeg";
 // markup
 const IndexPage = () => {
-  const { month, day, hour, min, sec } = useCountdownTimer();
-  const stats = [month, day, hour, min, sec].map((stat, i) => ({
-    title: `${
-      i === 0
-        ? "Months"
-        : i === 1
-        ? "Days"
-        : i === 2
-        ? "Hours"
-        : i === 3
-        ? "Minutes"
-        : "Seconds"
-    }`,
-    value: stat,
-  }));
+  const stats = useCountdownStats();
   return (
     <main>
       <title>Home Page</title>
@@ -37,11 +22,8 @@ const IndexPage = () => {
           objectPosition: "top left",
         }}
       />
-      <SimpleGrid columns={5} maxW="5xl" mx="auto">
-        {stats.map((stat, i) => (
-          <Stat key={i} {...stat} />
-        ))}
-      </SimpleGrid>
+      <br />
+      <Countdown />
     </main>
   );
 };

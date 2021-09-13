@@ -14,16 +14,20 @@ export const Stat = (props) => {
     >
       <Box
         as="dt"
-        color={useColorModeValue("gray.600", "whiteAlpha.700")}
-        fontWeight="medium"
+        color={useColorModeValue("text.600", "whiteAlpha.700")}
+        fontWeight="bold"
+        textTransform="uppercase"
       >
         {title}
       </Box>
       <Box
         as="dd"
-        fontSize="6xl"
+        fontSize={{
+          base: "3xl",
+          md: "6xl",
+        }}
         fontWeight="extrabold"
-        color={useColorModeValue("blue.500", "blue.300")}
+        color={useColorModeValue("maroon.500", "secondary.700")}
       >
         {value}
       </Box>

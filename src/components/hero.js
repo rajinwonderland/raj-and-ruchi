@@ -3,11 +3,11 @@ import {
   Heading,
   HStack,
   Img,
-  Stack,
   Text,
   useColorModeValue as mode,
 } from "@chakra-ui/react";
 import * as React from "react";
+import { Countdown } from "./countdown";
 
 export const Hero = ({ title, tagline, subtitle, image }) => {
   return (
@@ -47,11 +47,8 @@ export const Hero = ({ title, tagline, subtitle, image }) => {
           >
             {subtitle}
           </Text>
-          <Stack
-            direction={{ base: "column", sm: "row" }}
-            spacing="4"
-            mt="8"
-          ></Stack>
+          <Box mt="8">
+          </Box>
         </Box>
       </Box>
       <Box
