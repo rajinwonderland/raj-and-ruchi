@@ -1,15 +1,16 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://rajandruchi.com",
     title: "Raj & Ruchi",
   },
   plugins: [
     "gatsby-plugin-gatsby-cloud",
+    `@chakra-ui/gatsby-plugin`,
     "gatsby-plugin-image",
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: "",
+        trackingId: "UA-207435944-1",
       },
     },
     "gatsby-plugin-react-helmet",
